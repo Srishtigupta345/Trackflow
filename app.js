@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -11,11 +12,9 @@ const issueRoutes = require("./routes/issue.js");
 // Session & Auth
 const session = require("express-session");
 
-async function main() {
-    await mongoose.connect("mongodb://127.0.0.1:27017/Trackflow");
-}
 
-main()
+
+mongoose.connect(process.env.MONGO_URL)
 .then(() => {
     console.log("Mongodb connected!");
 }).catch((err) => {
