@@ -1,0 +1,62 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="issue-page">
+    <div class="backlink">
+        <a href="/project/<%= issue.project %>">← Back to project</a>
+    </div>
+    <div class="issue-card">
+        <div class="issue-top">
+            <span class="issue-id"><%= issue.issueId %></span>
+            <span class="priority"><%= issue.priority %></span>
+        </div>
+        <h2 class="issue-title"><%=issue.title%></h2>
+        <div class="issue-section">
+            <h4>Description</h4>
+            <p><%= issue.description%></p>
+        </div>
+        <div class="issue-meta">
+            <div class="meta-item">
+                <h4>Assigned To</h4>
+                <p><%= issue.assignedTo ? issue.assignedTo.username : "Unassigned" %></p>
+            </div>
+            <div class="meta-item">
+                <h4>Status</h4>
+                <p class="status"><%= issue.status %></p>
+            </div>
+        </div>
+        <div class="lifecycle">
+            <h4>Lifecycle</h4>
+                <div class="steps">
+                    <span class="<%= issue.status === 'Open' ? 'active' : '' %>">Open</span>
+                    <span>→</span>
+                    <span class="<%= issue.status === 'In Progress' ? 'active' : '' %>">In Progress</span>
+                    <span>→</span>
+                    <span class="<%= issue.status === 'Resolved' ? 'active' : '' %>">Resolved</span>
+                    <span>→</span>
+                    <span class="<%= issue.status === 'Closed' ? 'active' : '' %>">Closed</span>
+                </div>
+        </div>
+        <div class="issue-actions">
+            <% if(issue.status === "Open") {%>
+                    <form action="/issues/<%= issue._id %>/status" method="POST">
+                        <input type="hidden" name="status" value="In Progress">
+                        <button class="action-btn">Move to In Progress</button>
+                    </form>
+            <% } %>
+
+            <% if(issue.status === "In Progress") { %>
+                <form action="/issues/<%= issue._id %>/status" method="POST">
+                        <input type="hidden" name="status" value="Resolved">
+                        <button class="action-btn">Mark Resolved</button>
+                    </form>
+            <% } %>
+
+            <% if(issue.status === "Resolved") { %>
+                <form action="/issues/<%= issue._id %>/status" method="POST">
+                        <input type="hidden" name="status" value="Closed">
+                        <button class="action-btn">Close Issue</button>
+                    </form>
+            <% } %>
+        </div>
+    </div>
+</div>

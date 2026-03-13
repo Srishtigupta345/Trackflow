@@ -1,0 +1,26 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="issues-page">
+    <h2>All Issues</h2>
+    <p class="subtitle">Track all issues across projects</p>
+    <div class="issue-table">
+        <div class="issues-header">
+            <span>ID</span>
+            <span>Title</span>
+            <span>Priority</span>
+            <span>Status</span>
+            <span>Assigned To</span>
+            <span></span>
+        </div>
+        <% issues.forEach(issue => { %>
+            <div class="issue-row">
+                <span><%= issue.issueId %></span>
+                <span class="issue-title"><%= issue.title %></span>
+                <span class="priority"><%= issue.priority %></span>
+                <span class="status"><%= issue.status %></span>
+                <span><%= issue.assignedTo ? issue.assignedTo.username: "Unassigned" %></span>
+                <a href="/issues/<%= issue._id %>">View</a>
+            </div>
+        <% }) %>
+    </div>
+</div>

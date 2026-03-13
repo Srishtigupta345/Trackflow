@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: #f3f4f6;
+}
+
+/* Center layout */
+.auth-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* card */
+.auth-card {
+    width: 380px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* logo row */
+.logo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.logo-icon {
+    width: 30px;
+    color: #4f46e5;
+}
+.app-name {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* header */
+.auth-header h3 {
+    text-align: center;
+    margin: 10px 0 4px 0;
+    font-size: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* labels */
+.auth-card label {
+    display: block;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #374151;
+    font-weight: 600;
+}
+
+/* inputs */
+.auth-card input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.auth-card input:focus {
+    border-color: #4f46e5;
+}
+
+/* buttons */
+.auth-card button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 12px;
+    background: linear-gradient(90deg,#4f46e5,#6366f1);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.auth-card button:hover {
+    opacity: 0.9;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #4f46e5;
+    text-decoration: none;
+}

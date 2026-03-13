@@ -1,0 +1,101 @@
+.project-details-page {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 14px;
+}
+.back-link:hover {
+    color: #111827;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.project-header h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.status-badge {
+    background: #2563eb;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.issues-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.action-buttons{
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+.add-member-btn{
+    background: white;
+    color: #111827;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #d1d5db;
+    font-weight: 500;
+}
+.add-member-btn:hover{
+    background: #f9fafb;
+}
+.create-issue-btn {
+    background: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.issues-table {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+th {
+    font-size: 13px;
+    color: #6b7280;
+}
+td:last-child{
+    display: flex;
+    gap: 8px;
+}
+.delete-btn{
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.delete-btn:hover{
+    background: #dc2626;
+}

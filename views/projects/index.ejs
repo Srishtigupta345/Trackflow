@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') %>
+<div class="projects-page">
+    <div class="project-header">
+        <div>
+            <h2>Projects</h2>
+            <p>Manage your team's projects</p>
+        </div>
+        <a href="/project/create" class="create-project-btn"> + Create Project</a>
+    </div>
+    <div class="project-grid">
+        <% projects.forEach(project => { %>
+            <div class="project-card">
+                <div class="project-top">
+                    <h3><%= project.projectname %></h3>
+                    <span class="status-badge"><%= project.status %></span>
+                </div>
+                <p class="project-desc"><%= project.description %></p>
+                <div class="project-footer">
+                   <span class="members">👥 <%= project.members ? project.members.length : 0 %> members</span>
+                    <a href="/project/<%= project._id %>" class="open-btn">Open Project</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>

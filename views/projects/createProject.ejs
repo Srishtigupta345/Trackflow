@@ -1,0 +1,40 @@
+<% layout('layouts/boilerplate') %>
+
+<link rel="stylesheet" href="/css/createProject.css">
+
+<div class="create-project-page">
+  <a href="/project" class="back-link">← Back to projects</a>
+  <div class="page-header">
+    <h2>Create Project</h2>
+    <p>Add a new project to your workspace</p>
+  </div>
+  <div class="project-card">
+    <form method="POST" action="/project/create">
+      <div class="form-group">
+        <label>Project Name</label>
+        <input 
+          type="text" 
+          name="projectname"
+          placeholder="e.g. Marketing Website"
+          required
+        >
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea 
+          name="description"
+          rows="5"
+          placeholder="Brief description of the project"
+        ></textarea>
+      </div>
+      <div class="button-group">
+        <button type="submit" class="create-btn">
+          Create Project
+        </button>
+        <a href="/project" class="cancel-btn">
+          Cancel
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

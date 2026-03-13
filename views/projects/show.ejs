@@ -1,0 +1,57 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="project-details-page">
+    <div class="back-link">
+        <a href="/project">← Back to projects</a>
+    </div>
+    <div class="project-header">
+        <div>
+            <h2><%= project.projectname %></h2>
+            <p><%= project.description %></p>
+        </div>
+        <span class="status-badge"> <%= project.status %></span>
+    </div>
+    <div class="issues-header">
+        <h3>Issues</h3>
+        
+        <div class="action-buttons">
+            <a href="/project/<%= project._id %>/add-member" class="add-member-btn">+ Add Member</a>
+            <a href="/issues/create/<%= project._id %>" 
+                class="create-issue-btn"> 
+                + Create Issue 
+            </a>
+        </div>
+    </div>
+    <div class="issues-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Assigned To</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% issues.forEach(issue => { %>
+                    <tr>
+                        <td><%= issue.issueId%></td>
+                        <td><%= issue.title%></td>
+                        <td><%= issue.priority%></td>
+                        <td><%= issue.status%></td>
+                        <td><%= issue.assignedTo ? issue.assignedTo.username: "Unassgined"%></td>
+                        <td><a href="/issues/<%= issue._id%>">View</a></td>
+                        <td>
+                            <form action="/issues/<%= issue._id%>/delete" method="POST", style="display: inline;" onsubmit="return confirm('Delete this issue?')">
+                                <button class="delete-btn">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </div>
+</div>

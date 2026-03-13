@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="logo-row">
+          <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewbox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 12h4l3 8 4-16 3 8h4" /></svg>
+          <h2 class="app-name">TrackFlow</h2>
+        </div>
+        <h3>Create an account</h3>
+        <p class="subtitle">Get Started with Trackflow</p>
+      </div>
+      <form method="POST" action="/users/register">
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Enter Username" required>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter Passowrd" required>
+        <button type="submit">Create Account</button>
+      </form>
+      <p class="login-link">Already have an account? <a href="/users/login">Sign In</a></p>
+    </div>
+  </div>
+</body>
+</html>

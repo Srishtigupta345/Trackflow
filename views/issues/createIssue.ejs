@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="create-issue-page">
+    <div class="backlink">
+       <a href="/project/<%= projectId %>">← Back to project</a>
+    </div>
+    <div class="issue-card">
+        <h2>Create Issue</h2>
+            <form method="POST" action="/issues/<%= projectId %>/issues">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" name="title" placeholder="Issue title" required>
+                </div>
+                <div class="form-group">
+                   <label>Description</label>
+                   <textarea name="description" rows="4" placeholder="Describe the issue..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Priority</label>
+                        <select name="priority">
+                           <option>Select Priority</option>
+                           <option value="Low">Low</option>
+                           <option value="Medium">Medium</option>
+                           <option value="High">High</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                       <label>Assign Developer</label>
+                        <select name="assignedTo">
+                           <option value="">Select Developer</option>
+                           <% developers.forEach(dev => {%>
+                               <option value="<%= dev.user._id %>">
+                                   <%= dev.user.username %>
+                                </option>
+                            <% }) %>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="create-btn">Create Issue</button>
+                    <a href="/project/<%= projectId %>" class="cancel-button">Cancel</a>
+                </div>
+            </form>    
+    </div>
+</div>

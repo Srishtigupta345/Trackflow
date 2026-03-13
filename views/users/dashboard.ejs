@@ -1,0 +1,35 @@
+<% layout('layouts/boilerplate') %>
+<div class="dashboard-page">
+    <h2 class="dashboard-title">Dashboard</h2>
+    <p class="dashboard-sub">Overview of your workspace</p>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h4>My Total Projects</h4>
+            <p><%= totalProjects %></p>
+        </div>
+        <div class="stat-card">
+            <h4>My Open Issues</h4>
+            <p><%= openIssues %></p>
+        </div>
+        <div class="stat-card">
+            <h4>My In Progress</h4>
+            <p><%= inProgressIssues %></p>
+        </div>
+        <div class="stat-card">
+            <h4>My Resolved</h4>
+            <p><%= resolvedIssues %></p>
+        </div>
+    </div>
+    <h3 class="recent-title">Recent Issues</h3>
+    <div class="recent-issues">
+        <% recentIssues.forEach(issue => { %>
+            <div class="issue-row">
+                <span class="issue-id"><%= issue.issueId%></span>
+                <span class="issue-title"><%= issue.title%></span>
+                <span class="priority"><%= issue.priority%></span>
+                <span class="status"><%= issue.status%></span>
+            </div>
+        <%}) %>
+    </div>
+
+</div>

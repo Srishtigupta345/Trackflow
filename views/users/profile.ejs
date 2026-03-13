@@ -1,0 +1,30 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="profile-page">
+    <h2 class="page-title">Profile</h2>
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="avtar">
+                <%= user.username.charAt(0).toUpperCase() %>
+            </div>
+            <div class="user-info">
+                <h3><%= user.username %></h3>
+                <p class="email"><%= user.email %></p>
+            </div>
+        </div>
+        <div class="profile-details">
+            <div class="detail-row">
+                <span>Username</span>
+                <span><%= user.username %></span>
+            </div>
+            <div class="detail-row">
+                <span>Projects</span>
+                <span><%= projectsCount %></span>
+            </div>
+            <div class="detail-row">
+                <span>Issues Assigned</span>
+                <span><%= issuesAssigned %></span>
+            </div>
+        </div>
+    </div>
+</div>
