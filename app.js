@@ -40,11 +40,16 @@ app.get("/", (req, res) => {
     res.redirect("/users/login");
 });
 
+app.set("trust proxy", 1);
+
 // session 
 app.use(session({
-    secret: "mysupersecret",
+    secret: process.eventNames.SESSION_SECRET,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    Cookie:{
+        secure: false
+    }
 }));
 
 // flash use 
