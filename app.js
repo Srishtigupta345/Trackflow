@@ -44,7 +44,7 @@ app.set("trust proxy", 1);
 
 // session 
 app.use(session({
-    secret: process.eventNames.SESSION_SECRET,
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     Cookie:{
