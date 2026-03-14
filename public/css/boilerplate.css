@@ -148,3 +148,25 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
+@media (max-width:768px){
+    .sidebar{
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .main-content{
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    .stats-grid{
+        grid-template-columns: 1fr;
+    }
+    .project-grid{
+        grid-template-columns: 1fr;
+    }
+    .issue-table{
+        overflow-x: auto;
+    }
+}
