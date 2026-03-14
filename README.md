@@ -90,12 +90,37 @@ http://localhost:3000
 
 ## 📸 Screenshots
 
-(Add screenshots of)
+## 📸 Screenshots
 
-- Dashboard
-- Projects page
-- Issues page
-- Issue detail page
+### Dashboard
+![Dashboard](Screenshots/Dashboard.png)
+
+### Projects Page
+![Projects](Screenshots/Projects.png)
+
+### Project Detail Page
+![Project Detail](Screenshots/Project Detail Page.png)
+
+### Create Issue Page
+![Create Issue](Screenshots/Create Issue Page.png)
+
+### All Issues Page
+![All Issues](Screenshots/Issues.png)
+
+### Issue Update Page
+![Issue Update](Screenshots/Issue Update Page.png)
+
+### Add Member Page
+![Add Member](Screenshots/Add Member Page.png)
+
+### Login Page
+![Login](Screenshots/Login Page.png)
+
+### Register Page
+![Register](Screenshots/Register Page.png)
+
+### Profile Page
+![Profile](Screenshots/Profile.png)
 
 ---
 
