@@ -99,25 +99,25 @@ http://localhost:3000
 ![Projects](Screenshots/Projects.png)
 
 ### Project Detail Page
-![Project Detail](Screenshots/Project Detail Page.png)
+![Project Detail](Screenshots/Project%20Detail%20Page.png)
 
 ### Create Issue Page
-![Create Issue](Screenshots/Create Issue Page.png)
+![Create Issue](Screenshots/Create%20Issue%20Page.png)
 
 ### All Issues Page
 ![All Issues](Screenshots/Issues.png)
 
 ### Issue Update Page
-![Issue Update](Screenshots/Issue Update Page.png)
+![Issue Update](Screenshots/Issue%20Update%20Page.png)
 
 ### Add Member Page
-![Add Member](Screenshots/Add Member Page.png)
+![Add Member](Screenshots/Add%20Member%20Page.png)
 
 ### Login Page
-![Login](Screenshots/Login Page.png)
+![Login](Screenshots/Login%20Page.png)
 
 ### Register Page
-![Register](Screenshots/Register Page.png)
+![Register](Screenshots/Register%20Page.png)
 
 ### Profile Page
 ![Profile](Screenshots/Profile.png)
